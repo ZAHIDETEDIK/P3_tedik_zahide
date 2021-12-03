@@ -40,7 +40,12 @@ main .fas
 .découverte
 {
    text-align: center;
-   background-color:#ffff ;
+   background-color:rgb(248, 244, 244) ;
+   padding:20px ;
+}
+.découverte p 
+{
+    font-weight: 200;
 }
 
  .découverte button 
@@ -56,5 +61,45 @@ main .fas
 {
     transform: scale(1.02);
 }
+.fonctionnement ol
+{
+    display:flex ;
+    flex-direction: column;
+    
+}
+.fonctionnement li 
+{
+    background-color:#f6f6f6 ;
+    border-radius:15px ;
+    padding:20px 20px ;
+    box-shadow:2px 2px 15px -4px black ;
+    margin-right:15px ;
+    text-align: center;
+    font-weight: 900;
+    list-style-type: none;
+}
+.fonctionnement .fas
+{
+    margin-right:10px ;
+    color:gray ;
+    font-size:25px ;
+}
+.fonctionnement span 
+{
+    display:flex ;
+    background-color:#9356DC ;
+    width:30px ;
+    height:30px ;
+    border-radius: 50%;
+    align-items: center;
+    position:relative;
+    left:-14px;
+    bottom:-44px ;
+    padding:10px ;
+    color:white ;
+}
+.fonctionnement 
+{
 
+}
 }
