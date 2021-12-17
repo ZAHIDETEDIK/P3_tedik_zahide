@@ -1,16 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@media (max-width:767px)
-{
+
 
 *
-{
+{   margin:0px;
     box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    background-color:transparent ;
+
 }
 body
 {
     font-family:'Roboto',sans-serif ;
     margin:0 ;
+}
+.spiner
+{   display: grid;
+    place-items:center ;
+    position: fixed;
+    inset:0px ;
+    z-index:1 ;
+    background-color:#ffffff ;
+    opacity:0.9 ;
+    animation:spin 1s;
+    animation-delay:3s ;
+    animation-fill-mode: forwards;
+}
+@keyframes spin {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes image {
+to {
+transform: rotate(360deg);
+}
+}
+.spiner i
+{
+    animation:image 3s infinite linear;
+    color: #9356DC;
+}
+.spiner i
+{
+    font-size:50px ;
 }
 header
 {
@@ -24,7 +64,7 @@ main .place
     display: flex;
     text-align: center;
     background-color:lightgrey;
-    padding:2px ;
+    padding:5px ;
     align-items: center;
     justify-content: center;
     gap:5px ;
@@ -40,12 +80,13 @@ main .fas
 .découverte
 {
    text-align: center;
-   background-color:rgb(248, 244, 244) ;
+   background-color:#f6f6f6 ;
    padding:20px ;
 }
 .découverte p 
 {
     font-weight: 200;
+    padding:10px ;
 }
 
  .découverte button 
@@ -56,10 +97,13 @@ main .fas
     color:white ;
     padding:10px 20px ;
     box-shadow:2px 2px 15px -4px black ;
+    margin-bottom:35px ;
+    margin-top:10px ;
 }
 .découverte button:hover 
 {
     transform: scale(1.02);
+    cursor: pointer;
 }
 .fonctionnement ol
 {
@@ -71,18 +115,31 @@ main .fas
 {
     background-color:#f6f6f6 ;
     border-radius:15px ;
-    padding:20px 20px ;
+    padding:25px 5px ;
     box-shadow:2px 2px 15px -4px black ;
     margin-right:15px ;
     text-align: center;
     font-weight: 900;
     list-style-type: none;
 }
+.fonctionnement li:hover
+{
+    background-color:#e0c4d8;
+    opacity:0.4 ;
+    transform: scale(1.02);
+    cursor: pointer;
+}
 .fonctionnement .fas
 {
-    margin-right:10px ;
+    margin-right:30px ;
     color:gray ;
     font-size:25px ;
+    
+    
+}
+.fonctionnement .fas:hover
+{
+    color:#9356dc ;
 }
 .fonctionnement span 
 {
@@ -94,12 +151,412 @@ main .fas
     align-items: center;
     position:relative;
     left:-14px;
-    bottom:-44px ;
+    bottom:-50px ;
     padding:10px ;
     color:white ;
+    z-index:1 ;
 }
-.fonctionnement 
+.fonctionnement h2
 {
+    padding-left:20px ;
+    margin-top:35px ;
+}
+.restaux
+{
+    display: flex;
+    background-color:#f6f6f6 ;
+    padding:10px ;
+    flex-direction: column;
+    margin-top:65px ;
+    
+    
+}
+
+.carte
+{   display: flex;
+    border-radius:15px ;
+    background-color:white ;
+    width:100% ;
+    height:228px  ;
+    flex-direction: column;
+    box-shadow:2px 2px 15px -4px black ; 
+    margin-top:30px ;
+    
+    
+}
+ .carte.nouveaux 
+{   
+    position: relative;
+}
+ .nouveaux::before
+{
+    content: "Nouveaux";
+    position:absolute ;
+    height:25px;
+    width:22%;
+    background-color:#99E2D0;
+    color: rgb(77, 156, 152);
+    display: grid;
+    place-items:center ;
+    right: 40px;
+    margin-top:10px ;
+    
+}
+
+.carte .description p 
+{
+    
+    margin-top: 2px;
+    font-weight: 200;
+    margin-left: 0px;
+}
+.description
+{
+    display: flex;
+    margin-left:20px ;
+    justify-content: space-between;
+    
+}
+.carte .description h4 
+{
+    margin-top: 2px;
+    margin-bottom:2px ;
+}
+
+.carte img
+{
+    width:100% ;
+    height:177px ;
+    border-radius:15px 15px 0 0 ;
+    object-fit: cover;
 
 }
+.carte.description a:hover 
+{
+cursor: pointer;
 }
+.icone
+{
+    width:10% ;
+}
+
+     
+    
+ 
+
+
+
+ 
+.icone i
+{
+    
+    font-size:20px ;
+    position: absolute;  
+}
+.fas.fa-heart
+{
+    position: relative;
+    color: transparent;
+}
+
+
+footer 
+{
+    display: flex;
+    padding-left:25px ;
+    padding-top:20px ;
+    background-color:#353535;
+    color: white;
+    flex-direction: column;
+    margin-top:30px ;
+    
+    
+}
+footer h2 
+{
+    font-family:"Shrikhand",sans-serif;
+    color:white ;
+    margin-bottom:15px ;
+
+}
+footer p
+{
+
+    color: white;
+    padding:5px 0px ;
+    margin-left:0px ;
+}
+ .fa-hands-helping
+{
+    margin-right:6px ;
+    color: white;
+}
+.fa-utensils
+{
+    margin-right:7px ;
+}
+.footer
+{
+    margin-left:2px ;
+}
+/* page 2 */
+.photo img 
+{
+    width:100% ;
+    background-repeat:no-repeat;
+    object-fit: cover;
+    height: 220px;
+}
+ .resto1 h2
+{
+    font-family: 'Shrikhand',cursive;
+    border-radius:20px 20px 0px 0px ;
+}
+.resto1
+{
+    
+    background-color: #f6f6f6;
+    padding:10px ;
+    
+
+}
+.deuxieme
+{
+    box-shadow:none ;
+    padding:0% ;
+    position: relative;
+}
+
+.icone .fa-heart:before 
+{
+margin-left:8px ;
+}
+.deuxieme .fa-arrow-left
+{
+display:flex;
+position: absolute;
+left: 20px;
+margin-top:18px ;
+}
+.resto1 h3
+{
+    margin-top:20px ;
+}
+.lacarte 
+{   display: flex;
+    background-color:white ;
+    border-radius:15px ;
+    height:55px ;
+    box-shadow:2px 2px 15px -4px black ;
+    overflow: hidden;
+    margin-top:20px ;
+    
+}
+.lacarte h4,P
+{
+    margin-left:10px ;
+    
+}
+.lacarte h4
+{
+padding-top:12px ;
+}
+ span.prix
+{
+    display: flex;
+    margin-left:auto;
+    align-items: flex-end;
+    margin-right:5px 
+    
+}
+.case
+{
+    background-color:#2b9b77 ;
+    margin-right:-33px ;
+    transition:margin-right 0.25s;
+    display: grid;
+    place-items:center ;
+    width:9% ;
+    
+    
+}
+.case:hover
+{
+    margin-right:0px;
+}
+ .fa-check
+{   display: grid;
+    place-items:center ;
+    background-color:white ;
+    border-radius: 50%;
+    height:20px ;
+    width:20px ;
+    color:#2b9b77 ;
+}
+
+@keyframes check { 
+    0%
+    {
+      transform:rotate(-270deg);
+    }
+    100%
+    {
+        transform:rotate(0);
+    }
+    }
+
+
+.fa-check:hover
+{
+    animation: check 0.5s ease ;
+}
+.commande button
+{
+
+    background-image: linear-gradient(to top,#9356DC,#FF79DA);
+    border-radius:15px ;
+    border:none ;
+    color:white ;
+    padding:12px 40px ;
+    box-shadow:2px 2px 15px -4px black ;
+    margin-top:40px ;
+    margin-bottom:50px ;
+    margin-left: 110px;
+}
+.commande button:hover 
+{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.menu:hover
+{
+    cursor: pointer;
+}
+.menu h3
+{   margin-top:40px ;
+    font-weight: 500;
+    position: relative;
+}
+h3::after
+{
+    content:"" ;
+    position: absolute;
+    height:3px ;
+    width:50px ;
+   background-color: #2b9b77;
+   top:26px ;
+   left:0px;
+}
+.menu
+{
+    padding:10px ;
+}
+
+@keyframes anim { 
+    0%
+    {
+      transform: translateY(50%);
+      opacity:0 ;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity:1 ;
+    }
+    }
+    .lacarte
+    {
+        animation: anim 3s;
+    }
+    .resto1 .fa-heart 
+    {
+        font-size: 20px;
+        position: absolute;
+        right: 20px;
+        top:293px ;
+         
+    }
+    
+        @media screen and (min-width: 768px)
+        {
+            .commande button
+            {
+             margin-left:275px ;
+             padding:15px 66px; 
+             font-size:20px ;   
+            }
+            .lacarte
+            {
+                height:85px ;
+            }
+            .menu
+            {
+                padding:30px ;
+            }
+            h1
+            {
+                font-size:45px ;
+            }
+            h3 
+            {
+                font-size:25px ;
+            }
+            h2
+            {
+                font-size:34px;
+                padding-left:20px ;
+            }
+            h4 
+            {
+                font-size:20px ;
+                margin-bottom:6px ;
+            }
+            P 
+            {
+                font-size:15px ;
+            }
+            .plats
+            {
+                padding-top:10px ;
+
+            }
+            span.prix
+            {
+                margin-bottom:17px ;
+            }
+             .resto1 .fa-heart
+            {
+                font-size:30px ;
+                margin-top:10px ;
+            }
+            .fa-arrow-left
+            {
+                font-size:22px ;
+            
+            }
+            footer
+            {
+                text-align: center;
+            }
+            .fonctionnement ol 
+            {
+                padding:60px ;
+            }
+            .restaux
+            {
+                padding:60px ;
+                align-items: center;
+            }
+            .carte
+            {
+                width:80% ;
+            }
+            .nouveaux::before 
+            {
+                width: 18%;
+                right: 130px; 
+            }
+
+            }
+   
+   
