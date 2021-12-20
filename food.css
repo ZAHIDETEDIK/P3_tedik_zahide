@@ -92,7 +92,7 @@ main .fas
  .découverte button 
 {
     background-image: linear-gradient(to top,#9356DC,#FF79DA);
-    border-radius:15px ;
+    border-radius:20px ;
     border:none ;
     color:white ;
     padding:10px 20px ;
@@ -124,7 +124,7 @@ main .fas
 }
 .fonctionnement li:hover
 {
-    background-color:#e0c4d8;
+    background-color:#eebee1;
     opacity:0.4 ;
     transform: scale(1.02);
     cursor: pointer;
@@ -132,14 +132,14 @@ main .fas
 .fonctionnement .fas
 {
     margin-right:30px ;
-    color:gray ;
     font-size:25px ;
+    color:gray ;
     
     
 }
 .fonctionnement .fas:hover
 {
-    color:#9356dc ;
+    color:#9356DC;
 }
 .fonctionnement span 
 {
@@ -239,13 +239,6 @@ cursor: pointer;
 {
     width:10% ;
 }
-
-     
-    
- 
-
-
-
  
 .icone i
 {
@@ -256,8 +249,20 @@ cursor: pointer;
 .fas.fa-heart
 {
     position: relative;
+    font-size:20px ;
     color: transparent;
 }
+.fas.fa-heart:hover
+{
+    color:transparent;
+    background-image:linear-gradient(to top,#9356DC,#FF79DA);
+    background-clip:text ;
+    -webkit-background-clip:text ;
+    opacity:1 ;
+    transform: scale(1.2);
+}
+
+
 
 
 footer 
@@ -306,17 +311,24 @@ footer p
     background-repeat:no-repeat;
     object-fit: cover;
     height: 220px;
+    position: relative;
+    z-index:1;
 }
  .resto1 h2
 {
     font-family: 'Shrikhand',cursive;
-    border-radius:20px 20px 0px 0px ;
+   
 }
 .resto1
 {
     
     background-color: #f6f6f6;
     padding:10px ;
+    border-radius:20px 20px 0px 0px ;
+    position: absolute;
+    width:100% ;
+    z-index:2 ;
+    margin-top:-22px ;
     
 
 }
@@ -369,18 +381,16 @@ padding-top:12px ;
     margin-right:5px 
     
 }
-.case
+.case 
 {
     background-color:#2b9b77 ;
     margin-right:-33px ;
     transition:margin-right 0.25s;
     display: grid;
     place-items:center ;
-    width:9% ;
-    
-    
+    width:9% ;    
 }
-.case:hover
+    .case:hover
 {
     margin-right:0px;
 }
@@ -392,6 +402,7 @@ padding-top:12px ;
     height:20px ;
     width:20px ;
     color:#2b9b77 ;
+    
 }
 
 @keyframes check { 
@@ -455,25 +466,82 @@ h3::after
 @keyframes anim { 
     0%
     {
-      transform: translateY(50%);
+      transform:translateY(-50%);
       opacity:0 ;
+      
     }
     100%
     {
-        transform: translateY(0);
+        transform:translateY(0);
         opacity:1 ;
+        
     }
     }
-    .lacarte
+    .delay1
+    
+    {
+        
+        animation: anim 3s;
+        animation-delay:200ms ;
+        animation-fill-mode: both;
+    }
+    .delay2
     {
         animation: anim 3s;
+        animation-delay:400ms ;
+        animation-fill-mode: both;
     }
+    .delay3
+    {
+        animation: anim 3s;
+        animation-delay:600ms ;
+        animation-fill-mode: both;
+    }
+    .delay4
+    {
+        animation: anim 3s;
+        animation-delay:800ms ;
+        animation-fill-mode: both;
+    }
+    .delay5
+    {
+        animation: anim 3s;
+        animation-delay:1000ms ;
+        animation-fill-mode: both;
+
+    }
+    .delay6
+    {
+        animation: anim 3s;
+        animation-delay:1200ms ;
+        animation-fill-mode: both;
+
+    }
+    .delay7
+    {
+        animation: anim 3s;
+        animation-delay:1400ms ;
+        animation-fill-mode: both;
+    }
+    .delay8
+    {
+        animation: anim 3s;
+        animation-delay:1600ms ;
+        animation-fill-mode: both;
+    }
+    .delay9
+    {
+        animation: anim 3s;
+        animation-delay:1800ms ;
+        animation-fill-mode: both;
+    }
+
     .resto1 .fa-heart 
     {
         font-size: 20px;
         position: absolute;
         right: 20px;
-        top:293px ;
+        top:20px ;
          
     }
     
