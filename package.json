@@ -1,0 +1,22 @@
+{
+  "name": "p3_tedik_zahide-21.07.58",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZAHIDETEDIK/P3_tedik_zahide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZAHIDETEDIK/P3_tedik_zahide/issues"
+  },
+  "homepage": "https://github.com/ZAHIDETEDIK/P3_tedik_zahide#readme",
+  "dependencies": {
+    "sass": "^1.45.1"
+  }
+}
