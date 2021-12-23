@@ -98,7 +98,7 @@ main .fas {
   order: -1;
 }
 
-.découverte {
+.decouverte {
   text-align: center;
   background-color: #f6f6f6;
   padding: 20px;
@@ -109,7 +109,7 @@ main .fas {
   padding: 10px;
 }
 
-.découverte button {
+.decouverte button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border-radius: 20px;
   border: none;
@@ -120,7 +120,7 @@ main .fas {
   box-shadow: 2px 2px 15px -4px grey;
 }
 
-.découverte button:hover {
+.decouverte button:hover {
   transform: scale(1.02);
   cursor: pointer;
 }
