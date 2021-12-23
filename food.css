@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+/*value*/
+/*mixin*/
 a {
   text-decoration: none;
   color: black;
@@ -74,15 +76,15 @@ body {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0px 1px 1px grey;
+  box-shadow: 0px 3px 3px black;
   padding: 10px;
 }
 
 main .place {
   display: flex;
   text-align: center;
-  background-color: lightgrey;
-  padding: 5px;
+  background-color: #d6d1d1;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   gap: 5px;
@@ -113,9 +115,9 @@ main .fas {
   border: none;
   color: white;
   padding: 10px 20px;
-  box-shadow: 2px 2px 15px -4px black;
   margin-bottom: 35px;
   margin-top: 10px;
+  box-shadow: 2px 2px 15px -4px grey;
 }
 
 .découverte button:hover {
@@ -132,11 +134,11 @@ main .fas {
   background-color: #f6f6f6;
   border-radius: 15px;
   padding: 25px 5px;
-  box-shadow: 2px 2px 15px -4px black;
   margin-right: 15px;
   text-align: center;
   font-weight: 900;
   list-style-type: none;
+  box-shadow: 2px 2px 15px -4px grey;
 }
 
 .fonctionnement li:hover {
@@ -167,7 +169,7 @@ main .fas {
   left: -14px;
   bottom: -50px;
   padding: 10px;
-  color: white;
+  color: #ffffff;
   z-index: 1;
 }
 
@@ -187,12 +189,12 @@ main .fas {
 .carte {
   display: flex;
   border-radius: 15px;
-  background-color: white;
+  background-color: #ffffff;
   width: 100%;
   height: 228px;
   flex-direction: column;
-  box-shadow: 2px 2px 15px -4px black;
   margin-top: 30px;
+  box-shadow: 2px 2px 15px -4px grey;
 }
 
 .nouveaux {
@@ -266,26 +268,25 @@ footer {
   padding-left: 25px;
   padding-top: 20px;
   background-color: #353535;
-  color: white;
+  color: #ffffff;
   flex-direction: column;
-  margin-top: 30px;
 }
 
 footer h2 {
   font-family: "Shrikhand", sans-serif;
-  color: white;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 footer p {
-  color: white;
+  color: #ffffff;
   padding: 5px 0px;
   margin-left: 0px;
 }
 
 .fa-hands-helping {
   margin-right: 6px;
-  color: white;
+  color: #ffffff;
 }
 
 .fa-utensils {
@@ -344,11 +345,11 @@ footer p {
 
 .lacarte {
   display: flex;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 15px;
   height: 55px;
-  box-shadow: 2px 2px 15px -4px black;
   margin-top: 20px;
+  box-shadow: 2px 2px 15px -4px grey;
   overflow: hidden;
 }
 
@@ -374,9 +375,13 @@ span.prix {
 .lacarte:hover .case {
   -webkit-animation: CheckCase 3s;
           animation: CheckCase 3s;
-  background-color: #2b9b77;
+  background-color: #99E2D0;
   display: grid;
   place-items: center;
+}
+.lacarte:hover .fa-check {
+  -webkit-animation: check 3s;
+          animation: check 3s;
 }
 
 @-webkit-keyframes CheckCase {
@@ -399,11 +404,11 @@ span.prix {
 .fa-check {
   display: grid;
   place-items: center;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 50%;
   height: 20px;
   width: 20px;
-  color: #2b9b77;
+  color: #227c60;
 }
 
 @-webkit-keyframes check {
@@ -428,16 +433,20 @@ span.prix {
           animation: check 0.5s ease;
 }
 
+.commande {
+  display: flex;
+  justify-content: center;
+}
+
 .commande button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border-radius: 15px;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 12px 40px;
-  box-shadow: 2px 2px 15px -4px black;
   margin-top: 40px;
   margin-bottom: 50px;
-  margin-left: 110px;
+  box-shadow: 2px 2px 15px -4px grey;
 }
 
 .commande button:hover {
@@ -460,13 +469,14 @@ h3::after {
   position: absolute;
   height: 3px;
   width: 50px;
-  background-color: #2b9b77;
+  background-color: #99E2D0;
   top: 26px;
   left: 0px;
 }
 
 .menu {
   padding: 10px;
+  background-color: #f6f6f6;
 }
 
 @-webkit-keyframes anim {
@@ -571,6 +581,15 @@ h3::after {
           animation-fill-mode: both;
 }
 
+.delay10 {
+  -webkit-animation: anim 3s;
+          animation: anim 3s;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 .resto1 .fa-heart {
   font-size: 20px;
   position: absolute;
@@ -579,8 +598,12 @@ h3::after {
 }
 
 @media screen and (min-width: 768px) {
+  .commande {
+    display: flex;
+    justify-content: center;
+  }
+
   .commande button {
-    margin-left: 238px;
     padding: 15px 66px;
     font-size: 20px;
   }
@@ -632,30 +655,18 @@ h3::after {
     font-size: 22px;
   }
 
-  footer {
-    text-align: center;
-  }
-
   .fonctionnement ol {
     padding: 60px;
   }
 
-  .restaux {
-    padding: 60px;
-    align-items: center;
-  }
-
   .carte {
     width: 80%;
+    margin-left: 80px;
   }
 
   .nouveaux::before {
     width: 18%;
     right: 20px;
-  }
-
-  .case {
-    margin-right: -62px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -722,10 +733,6 @@ h3::after {
     width: 17%;
     height: 21px;
     right: 11px;
-  }
-
-  .commande button {
-    margin-left: 386px;
   }
 
   .fa-utensils {
