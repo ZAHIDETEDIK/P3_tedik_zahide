@@ -87,7 +87,6 @@ main .place {
   padding: 10px;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 }
 
 main p {
@@ -118,29 +117,29 @@ main .fas {
   margin-bottom: 35px;
   margin-top: 10px;
   box-shadow: 2px 2px 15px -4px grey;
-  
 }
 
 .decouverte button:hover {
   transform: scale(1.02);
   cursor: pointer;
-  opacity:80% ;
+  opacity: 80%;
 }
 
 .fonctionnement ol {
   display: flex;
   flex-direction: column;
+  counter-reset: item;
 }
 
 .fonctionnement li {
   background-color: #f6f6f6;
   border-radius: 15px;
-  padding: 25px 5px;
   margin-right: 15px;
   text-align: center;
   font-weight: 900;
   list-style-type: none;
   box-shadow: 2px 2px 15px -4px grey;
+  margin-bottom: 20px;
 }
 
 .fonctionnement li:hover {
@@ -151,8 +150,9 @@ main .fas {
 }
 
 .fonctionnement .fas {
-  margin-right: 30px;
-  font-size: 25px;
+  margin-right: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
   color: gray;
 }
 
@@ -160,16 +160,18 @@ main .fas {
   color: #9356DC;
 }
 
-.fonctionnement span {
+.fonctionnement li::before {
+  content: counter(item);
+  counter-increment: item;
   display: flex;
   background-color: #9356DC;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   align-items: center;
   position: relative;
-  left: -14px;
-  bottom: -50px;
+  left: -15px;
+  bottom: -20px;
   padding: 10px;
   color: #ffffff;
   z-index: 1;
@@ -178,6 +180,7 @@ main .fas {
 .fonctionnement h2 {
   padding-left: 20px;
   margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 .restaux {
@@ -208,17 +211,19 @@ main .fas {
   position: absolute;
   height: 27px;
   width: 22%;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 3px;
   background-color: #99E2D0;
-  color: #2e8856;
+  color: #4d9c98;
   display: grid;
   place-items: center;
   right: 12px;
   margin-top: 10px;
-  font-size:12px ;
 }
 
 .carte .description p {
-  margin-top: 5px;
+  margin-top: 15px;
   font-weight: 200;
   margin-left: 0px;
 }
@@ -230,7 +235,7 @@ main .fas {
 }
 
 .carte .description h4 {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 2px;
 }
 
@@ -247,15 +252,16 @@ main .fas {
 }
 
 .icone i {
-  
+  font-size: 22px;
   position: absolute;
-  margin-top:22px ;
+  margin-top: 22px;
 }
 
 .fas.fa-heart {
   position: relative;
   color: transparent;
   font-size: 22px;
+  transition: all 200ms ease-out;
 }
 
 .fas.fa-heart:hover {
@@ -265,10 +271,6 @@ main .fas {
   -webkit-background-clip: text;
   opacity: 1;
   transform: scale(1.2);
-}
-.icone .fa-heart::before
-{
-  font-size: 22px;
 }
 
 footer {
@@ -318,7 +320,7 @@ footer p {
 
 .resto1 h2 {
   font-family: "Shrikhand", cursive;
-  margin-top:20px ;
+  margin-top: 20px;
 }
 
 .resto1 {
@@ -328,7 +330,7 @@ footer p {
   position: absolute;
   width: 100%;
   z-index: 2;
-  margin-top: -42px;
+  margin-top: -22px;
 }
 
 .deuxieme {
@@ -339,6 +341,7 @@ footer p {
 
 .icone .fa-heart:before {
   margin-left: 8px;
+  font-size: 22px;
 }
 
 .deuxieme .fa-arrow-left {
@@ -351,8 +354,8 @@ footer p {
 .resto1 h3 {
   margin-top: 20px;
 }
-.plats
-{
+
+.plats {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -377,14 +380,14 @@ footer p {
   padding-top: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size:20px ;
+  font-size: 20px;
   margin-bottom: 4px;
 }
-.lacarte p 
-{   
+
+.lacarte p {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size:15px ;
+  font-size: 17px;
   font-weight: 300;
 }
 
@@ -392,11 +395,10 @@ span.prix {
   display: flex;
   margin-left: auto;
   align-items: flex-end;
-  margin-right: 15px;
-  margin-bottom: 8px;
+  margin-right: 19px;
+  margin-bottom: 2px;
   font-weight: 500;
 }
-
 
 .case {
   display: none;
@@ -408,10 +410,12 @@ span.prix {
   background-color: #99E2D0;
   display: grid;
   place-items: center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .lacarte:hover .fa-check {
-  -webkit-animation: check 0.5s ease-in-out;
-          animation: check 0.5s ease-in-out;
+  -webkit-animation: check 2s ease-in-out;
+          animation: check 2s ease-in-out;
 }
 
 @-webkit-keyframes CheckCase {
@@ -419,7 +423,7 @@ span.prix {
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 18%;
   }
 }
 
@@ -428,7 +432,7 @@ span.prix {
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 18%;
   }
 }
 .fa-check {
@@ -465,20 +469,20 @@ span.prix {
 
 .commande button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  border-radius: 30px;
+  border-radius: 20px;
   border: none;
   color: #ffffff;
   padding: 15px 50px;
   margin-top: 40px;
   margin-bottom: 50px;
   box-shadow: 2px 2px 15px -4px grey;
-  font-size:15px ;
 }
 
 .commande button:hover {
   transform: scale(1.02);
   cursor: pointer;
-  opacity:80% ;
+  opacity: 95%;
+  box-shadow: 2px 2px 15px 2px gray;
 }
 
 .menu:hover {
@@ -713,16 +717,15 @@ h3::after {
     font-size: 20px;
   }
 
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+
   .découverte button {
     padding: 20px 35px;
     margin-top: 25px;
     font-size: 20px;
-  }
-  .fonctionnement
-  {
-    display: flex;
-    flex-direction: column;
-    
   }
 
   .fonctionnement ol {
@@ -737,7 +740,12 @@ h3::after {
 
   .fonctionnement li {
     border-radius: 20px;
-    padding: 18px 14px;
+    padding: 6px 32px;
+  }
+
+  .fonctionnement li::before {
+    left: -44px;
+    bottom: -20px;
   }
 
   .fonctionnement .fas {
@@ -769,16 +777,4 @@ h3::after {
     height: 21px;
     right: 11px;
   }
-  .menu
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-  .lacarte
-  {
-    width:45% ;
-  }
-
 }/*# sourceMappingURL=food.css.map */
