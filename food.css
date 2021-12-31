@@ -69,20 +69,21 @@ body {
 }
 
 .spiner i {
-  font-size: 50px;
+  font-size: 90px;
 }
 
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0px 3px 3px black;
   padding: 10px;
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3px;
 }
 
 main .place {
   display: flex;
   text-align: center;
-  background-color: #d6d1d1;
+  background-color: #e0dfdf;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -119,10 +120,10 @@ main .fas {
 }
 
 .decouverte button:hover {
-  transform: scale(1.02);
   cursor: pointer;
-  opacity: 95%;
+  opacity: 0.8;
   box-shadow: 2px 2px 15px 2px gray;
+  transition: 0.3s;
 }
 
 .fonctionnement ol {
@@ -143,10 +144,10 @@ main .fas {
 }
 
 .fonctionnement li:hover {
-  background-color: #eebee1;
-  opacity: 0.4;
-  transform: scale(1.02);
+  opacity: 0.7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .fonctionnement .fas {
@@ -160,7 +161,7 @@ main .fas {
   color: #9356DC;
 }
 
-.fonctionnement li::before {
+li::before {
   content: counter(item);
   counter-increment: item;
   display: flex;
@@ -174,7 +175,6 @@ main .fas {
   bottom: -20px;
   padding: 10px;
   color: #ffffff;
-  z-index: 1;
 }
 
 .fonctionnement h2 {
@@ -223,7 +223,7 @@ main .fas {
 }
 
 .carte .description p {
-  margin-top: 15px;
+  margin-top: 5px;
   font-weight: 200;
   margin-left: 0px;
 }
@@ -235,8 +235,7 @@ main .fas {
 }
 
 .carte .description h4 {
-  margin-top: 5px;
-  margin-bottom: 2px;
+  margin-top: 12px;
 }
 
 .carte img {
@@ -254,14 +253,14 @@ main .fas {
 .icone i {
   font-size: 22px;
   position: absolute;
-  margin-top: 22px;
+  margin-top: 17px;
 }
 
 .fas.fa-heart {
   position: relative;
   color: transparent;
   font-size: 22px;
-  transition: all 200ms ease-out;
+  transition: all 200ms ease-in-out;
 }
 
 .fas.fa-heart:hover {
@@ -330,7 +329,7 @@ footer p {
   position: absolute;
   width: 100%;
   z-index: 2;
-  margin-top: -22px;
+  margin-top: -43px;
 }
 
 .deuxieme {
@@ -442,7 +441,7 @@ span.prix {
   border-radius: 50%;
   height: 20px;
   width: 20px;
-  color: #227c60;
+  color: #99E2D0;
 }
 
 @-webkit-keyframes check {
@@ -479,10 +478,10 @@ span.prix {
 }
 
 .commande button:hover {
-  transform: scale(1.02);
   cursor: pointer;
-  opacity: 95%;
+  opacity: 0.8;
   box-shadow: 2px 2px 15px 2px gray;
+  transition: 0.3s;
 }
 
 .menu:hover {
@@ -700,7 +699,7 @@ h3::after {
     right: 20px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1500px) {
   h1 {
     font-size: 60px;
   }
@@ -780,5 +779,19 @@ h3::after {
 
   .deuxieme .fa-arrow-left {
     margin-top: 34px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lacarte {
+    width: 60%;
+  }
+
+  .resto1 .fa-heart {
+    right: 60px;
   }
 }/*# sourceMappingURL=food.css.map */
