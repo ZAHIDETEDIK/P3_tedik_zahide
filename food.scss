@@ -140,27 +140,9 @@ main .fas
     list-style-type: none;
     @include shadow;
     margin-bottom:20px ;
+
 }
-.fonctionnement li:hover
-{
-    opacity:0.7 ;
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
-    cursor: pointer;
-    transition: 0.3s;
-    
-}
-.fonctionnement .fas
-{
-    margin-right:15px ;
-    font-size:20px ;
-    margin-bottom:20px ;
-    color:gray ; 
-}
-.fonctionnement .fas:hover
-{
-    color:$primaire;
-}
- li::before
+li::before
 {
     content:counter(item) ;
     counter-increment: item;
@@ -175,11 +157,29 @@ main .fas
     bottom:-20px ;
     padding:10px ;
     color:$white;
-  
-    
-    
-    
 }
+.fonctionnement li:hover
+{ 
+    opacity:0.7 ;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(237, 220, 245);
+}
+.fonctionnement .fas:hover
+{ 
+    color:$primaire; 
+}
+
+.fonctionnement .fas
+{
+    margin-right:15px ;
+    font-size:20px ;
+    margin-bottom:20px ;
+    color:gray ; 
+}
+
+
 .fonctionnement h2
 {
     padding-left:20px ;
@@ -308,7 +308,7 @@ footer p
     padding:5px 0px ;
     margin-left:0px ;
 }
- .fa-hands-helping
+.fa-hands-helping
 {
     margin-right:6px ;
     color:$white;
@@ -387,7 +387,7 @@ margin-top:18px ;
     @include shadow;
     overflow: hidden;
     text-overflow: ellipsis;
-     white-space: nowrap;
+    white-space: nowrap;
 }
 
 .lacarte h4,P
@@ -409,7 +409,7 @@ margin-bottom:4px ;
   font-size:17px ;
   font-weight: 300;
 }
- span.prix
+span.prix
 {
     display: flex;
     margin-left:auto;
@@ -453,8 +453,7 @@ margin-bottom:4px ;
     border-radius: 50%;
     height:20px ;
     width:20px ;
-    color:$terciaire;
-    
+    color:$terciaire;    
 }
 
 @keyframes check { 
@@ -483,8 +482,7 @@ margin-bottom:4px ;
     padding:15px 50px ;
     margin-top:40px ;
     margin-bottom:50px ;
-    @include shadow;
-    
+    @include shadow;   
 }
 .commande button:hover 
 {
@@ -632,7 +630,7 @@ h3
 {
          font-size:25px ;
 }
- h2
+h2
     {
         font-size:34px;
         padding-left:20px ;
@@ -658,7 +656,7 @@ span.prix
 .resto1 .fa-heart
     {
         font-size:30px ;
-        margin-top:10px ;
+        margin-top:27px ;
     }
 .fa-arrow-left
     {
@@ -726,7 +724,7 @@ main p
         border-radius:20px ;
         padding:6px 32px ;
     }
-    .fonctionnement li::before
+.fonctionnement li::before
     {
         left: -44px;
         bottom:-20px ;
@@ -761,22 +759,23 @@ main p
         height: 21px;
         right: 11px;
     }
-    .deuxieme .fa-arrow-left
+.deuxieme .fa-arrow-left
     {
         margin-top:34px ;
     }
-    .menu
+.menu
     {
         display: flex;
         flex-direction: column;
         align-items: center
     }
-    .lacarte
+.lacarte
     {
         width: 60%;
     }
-    .resto1 .fa-heart
+.resto1 .fa-heart
     {
-       right:60px ; 
+       right:60px ;
     }
+
     }
