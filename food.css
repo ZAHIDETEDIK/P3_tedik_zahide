@@ -733,11 +733,6 @@ h3::after {
     justify-content: space-around;
   }
 
-  .fonctionnement span {
-    left: 10px;
-    bottom: -19px;
-  }
-
   .fonctionnement li {
     border-radius: 20px;
     padding: 6px 32px;
