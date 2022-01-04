@@ -66,10 +66,7 @@ body {
   -webkit-animation: image 3s infinite linear;
           animation: image 3s infinite linear;
   color: #9356DC;
-}
-
-.spiner i {
-  font-size: 90px;
+  font-size: 70px;
 }
 
 header {
@@ -254,7 +251,7 @@ li::before {
 .icone i {
   font-size: 22px;
   position: absolute;
-  margin-top: 17px;
+  margin-top: 18px;
 }
 
 .fas.fa-heart {
