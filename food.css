@@ -258,7 +258,7 @@ li::before {
   position: relative;
   color: transparent;
   font-size: 22px;
-  transition: all 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .fas.fa-heart:hover {
@@ -267,7 +267,6 @@ li::before {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: scale(1.2);
 }
 
 footer {
