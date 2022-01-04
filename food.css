@@ -401,17 +401,20 @@ span.prix {
 }
 
 .lacarte:hover .case {
-  -webkit-animation: CheckCase 2s;
-          animation: CheckCase 2s;
+  -webkit-animation: CheckCase 0.5s;
+          animation: CheckCase 0.5s;
   background-color: #99E2D0;
   display: grid;
   place-items: center;
+  transform: translateX(0);
+  visibility: visible;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  padding: 20px;
 }
 .lacarte:hover .fa-check {
-  -webkit-animation: check 2s ease-in-out;
-          animation: check 2s ease-in-out;
+  -webkit-animation: check 1s ease-in-out;
+          animation: check 1s ease-in-out;
 }
 
 @-webkit-keyframes CheckCase {
@@ -419,7 +422,7 @@ span.prix {
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 22%;
   }
 }
 
@@ -428,7 +431,7 @@ span.prix {
     width: 0%;
   }
   100% {
-    width: 30%;
+    width: 22%;
   }
 }
 .fa-check {

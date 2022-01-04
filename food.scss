@@ -391,15 +391,22 @@ span.prix
 .lacarte:hover
 {
     .case{
-        animation:CheckCase 2s;
+        animation:CheckCase 0.5s;
         background-color:$terciaire ;
         display: grid;
         place-items: center;
-        animation-fill-mode: forwards;
+        -webkit-transform: translateX(0);
+        transform:translateX(0) ;
+        visibility: visible;
+        animation-fill-mode:forwards ;
+        padding:20px ;
+        
+    
+       
     }
     .fa-check
     {
-        animation:check 2s ease-in-out ;
+        animation:check 1s ease-in-out ;
     }
 }
 @keyframes CheckCase {
@@ -408,7 +415,7 @@ span.prix
     }
 
     100%{
-        width: 30%;
+        width: 22%;
     }
 }
 .fa-check
