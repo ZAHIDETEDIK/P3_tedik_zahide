@@ -401,16 +401,13 @@ span.prix {
 }
 
 .lacarte:hover .case {
-  -webkit-animation: CheckCase 0.5s;
-          animation: CheckCase 0.5s;
+  -webkit-animation: CheckCase 1s;
+          animation: CheckCase 1s;
   background-color: #99E2D0;
   display: grid;
   place-items: center;
-  transform: translateX(0);
-  visibility: visible;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  padding: 20px;
 }
 .lacarte:hover .fa-check {
   -webkit-animation: check 1s ease-in-out;

@@ -391,18 +391,11 @@ span.prix
 .lacarte:hover
 {
     .case{
-        animation:CheckCase 0.5s;
+        animation:CheckCase 1s;
         background-color:$terciaire ;
         display: grid;
         place-items: center;
-        -webkit-transform: translateX(0);
-        transform:translateX(0) ;
-        visibility: visible;
-        animation-fill-mode:forwards ;
-        padding:20px ;
-        
-    
-       
+        animation-fill-mode:forwards ; 
     }
     .fa-check
     {
