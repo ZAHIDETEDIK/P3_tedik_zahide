@@ -147,15 +147,6 @@ li::before
     padding:10px ;
     color:$white;
 }
-i.fas.fa-store::before
-{
-    color:$primaire; 
-}
-#deguste
-{
-    background-color:rgba(233, 212, 241, 0.76);
-}
-
 .fonctionnement .fas
 {
     margin-right:15px ;
@@ -168,6 +159,17 @@ i.fas.fa-store::before
     padding-left:20px ;
     margin-top:35px ;
     margin-bottom:20px ;
+}
+li:hover
+{
+    .fas
+    {
+        color:$primaire ;
+    }
+}
+li:hover
+{
+    background-color: rgb(233,212,241,0.76);
 }
 .restaux
 {
